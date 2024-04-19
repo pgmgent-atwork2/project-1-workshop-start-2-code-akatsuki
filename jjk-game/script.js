@@ -1,35 +1,35 @@
-const dino = document.getElementById("character");
-const rock = document.getElementById("curse");
+const char = document.getElementById("character");
+const curse = document.getElementById("curse");
 const score = document.getElementById("score");
 
 function jump() {
-    dino.classList.add("jump-animation");
-    setTimeout(() => dino.classList.remove("jump-animation"), 500);
+    char.classList.add("jump-animation");
+    setTimeout(() => char.classList.remove("jump-animation"), 500);
 }
 
 document.addEventListener("keypress", (event) => {
-    if (!dino.classList.contains("jump-animation")) {
+    if (!char.classList.contains("jump-animation")) {
         jump();
     }
 });
 
 setInterval(() => {
-    const dinoTop = parseInt(
-        window.getComputedStyle(dino).getPropertyValue("top")
+    const charTop = parseInt(
+        window.getComputedStyle(char).getPropertyValue("top")
     );
-    const rockLeft = parseInt(
-        window.getComputedStyle(rock).getPropertyValue("left")
+    const curseLeft = parseInt(
+        window.getComputedStyle(curse).getPropertyValue("left")
     );
     score.innerText++;
 
-    if (rockLeft < 0) {
-        rock.style.display = "none";
+    if (curseLeft < 0) {
+        curse.style.display = "none";
     } else {
-        rock.style.display = "";
+        curse.style.display = "";
     }
 
-    if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
-        alert("You got a score of: " + score.innerText + "\n\nPlay again?");
+    if (curseLeft < 50 && curseLeft > 0 && charTop > 150) {
+        alert("You got a score of: " + score.innerText + "\n\nPlay again?>");
         location.reload();
     }
-}, 50);
+});
