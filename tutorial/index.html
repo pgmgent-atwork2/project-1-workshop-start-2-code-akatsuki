@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="static/css/main.css">
     <title>Tutorial Dino game</title>
 </head>
+
 <body>
-    <header >
+    <header>
         <div class="title-container container">
             <figure>
                 <img src="./static/assets/img/charakter-juji-gif.gif" alt="charakter-juji">
@@ -19,34 +21,66 @@
                 <img src="./static/assets/img/charakter-kenjaku.gif" alt="charakter-juji">
             </figure>
         </div>
-        
+
     </header>
     <main class="container">
         <div class="top-content">
-             <div class="description">
-        <h2>Inspiratie</h2>
-        
-        <p class="description__text">Je hebt waarschijnlijk al eens het Dino-spel van Google gespeeld wanneer je geen internet hebt, of er op zijn minst van gehoord. Het is een eenvoudig ren-en-spring-spel waarbij je probeert de hoogste score te behalen<br> <br>
-        In deze tuturial zullen we iets gelijk gelijkaardig maken met hetzelfde principie maar met onze eigen charakters van de cartoon JUJUTSU KAISEN meer van cartoon kun je vinden bij de links. </p>
-        <div class="links-container">
-            <h2>Links van de inspiratie</h2>
-            <ul>
-                <li><p>Link naar de cartoon = <a href="https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen" target="_blank">JuJutsu Kaisen</a></p></li>
-                <li><p>Link naar de inspiratie game = <a href="https://dinorunner.com/" target="_blank">Dino game</a> </p></li>
-            </ul>
-        </div>
-       </div>
-       <div class="description__img">
-        <figure>
-            <img src="./static/assets/img/chrome-dino.jpg" alt="Dino game">
-        </figure>
-       </div>
+            <div class="description">
+                <h2>Inspiratie</h2>
+
+                <p class="description__text">Je hebt waarschijnlijk al eens het Dino-spel van Google gespeeld wanneer je
+                    geen internet hebt, of er op zijn minst van gehoord. Het is een eenvoudig ren-en-spring-spel waarbij
+                    je probeert de hoogste score te behalen<br> <br>
+                    In deze tuturial zullen we iets gelijk gelijkaardig maken met hetzelfde principie maar met onze
+                    eigen charakters van de cartoon JUJUTSU KAISEN meer van cartoon kun je vinden bij de links. </p>
+                <div class="links-container">
+                    <h2>Links naar de inspiratie</h2>
+                    <ul>
+                        <li>
+                            <p>Link naar de cartoon = <a
+                                    href="https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen"
+                                    target="_blank">JuJutsu Kaisen</a></p>
+                        </li>
+                        <li>
+                            <p>Link naar de inspiratie game = <a href="https://dinorunner.com/" target="_blank">Dino
+                                    game</a> </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="description__img">
+                <figure>
+                    <img src="./static/assets/img/chrome-dino.jpg" alt="Dino game">
+                </figure>
+            </div>
         </div>
 
-       
-      
+
+        <div class="main-content">
+            <!--------------------------SLIDE CONTAINER INSPIRATIE https://webdesign.tutsplus.com/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734t----------------------->
+            <h2>Volg de stappenplan</h2>
+            <div class="tutorial-container">
+                <button class="next-slide-arrow" id="prev-slide-arrow">
+                    &#8249;
+                </button>
+
+                <button class="next-slide-arrow" id="next-slide-arrow-next">
+                    &#8250;
+                </button>
+
+                <ul class="slides-container" id="slides-container">
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                </ul>
+            </div>
+        </div>
+
     </main>
-    
 
+
+    <script src="./static/js/main.js"></script>
 </body>
+
 </html>
