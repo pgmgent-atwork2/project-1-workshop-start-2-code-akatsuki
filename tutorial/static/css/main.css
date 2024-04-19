@@ -3,6 +3,9 @@
   --background-color: #253361;
   --light-color: #ffff;
   --secundary-color: #4c5688;
+  --tirdairy-color: #747cb2;
+  --no-list-style: none;
+  --normal-margin: 4rem;
 }
 
 @font-face {
@@ -54,10 +57,14 @@ body {
 }
 
 /* //---------------------------HEADER------------------------------// */
+h1,
+h2,
+h3 {
+  font-family: "Nunito", sans-serif;
+}
 
 header {
   background-color: var(--secundary-color);
-  font-family: "Nunito", sans-serif;
   padding: 1rem;
 }
 
@@ -77,10 +84,52 @@ header {
 }
 
 /* // ---------------------------MAIN------------------------------// */
-.top .description {
+
+.top-content {
+  display: flex;
+  padding-top: 3rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .description__text {
   width: 40rem;
   margin-top: 1rem;
+}
+
+.top-content .description__img img {
+  border-radius: 2rem;
+}
+
+.links-container {
+  margin-top: 2rem;
+  background-color: var(--secundary-color);
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 2rem;
+}
+
+.links-container:hover {
+  box-shadow: 10px 10px white;
+  transition: all 0.3s ease-in-out;
+}
+
+.links-container h2 {
+  margin-bottom: 1rem;
+}
+
+.links-container ul {
+  list-style: var(--no-list-style);
+  padding: 0;
+}
+
+.links-container ul li a {
+  color: var(--light-color);
+}
+
+.links-container ul li a:hover {
+  background-color: var(--tirdairy-color);
+  transition: all 0.3s ease-in-out;
 }
