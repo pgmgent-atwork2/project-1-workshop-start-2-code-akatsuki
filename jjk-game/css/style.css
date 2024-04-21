@@ -1,3 +1,9 @@
+body {
+    font-family: sans-serif;
+    background-color: #253361;
+    color: white;
+}
+
 #score {
     text-align: center;
 }
@@ -10,23 +16,25 @@
     background-image: url("../assets/background.gif");
     background-size: cover;
     overflow: hidden;
+    position: relative;
 }
 
 #character {
     height: 100px;
     width: 75px;
-    top: 255px;
-    position: relative;
+    position: absolute; /* Position relative to the parent */
+    bottom: 0; /* Position at the bottom */
+    left: 0;
     background-image: url("../assets/itador.gif");
     background-size: cover;
-    background-color: blue;
 }
 
 #villain {
     height: 150px;
     width: 100px;
-    top: 210px;
-    right: 500px;
+    position: absolute; /* Position relative to the parent */
+    bottom: 0; /* Position at the bottom */
+    right: 0;
     position: absolute;
     background-image: url("../assets/kenjaku.gif");
     background-size: cover;
@@ -35,19 +43,18 @@
 .curse {
     width: 50px;
     height: 50px;
-    position: relative;
-    top: 180px;
-    left: 550px;
+    position: absolute; /* Position relative to the parent */
+    bottom: 0; /* Position at the bottom */
     background-image: url("../assets/projectile.gif");
     background-position: center;
     background-size: cover;
     animation: curse 1.75s infinite;
     animation-timing-function: ease-in;
-    background-color: red;
 }
 
 .second {
-    top: 50px;
+    position: absolute; /* Position relative to the parent */
+    bottom: 100px; /* Position at the bottom */
     animation: TopCurse 3s infinite;
     animation-timing-function: ease-in;
 }
@@ -87,4 +94,12 @@
     100% {
         top: 225px;
     }
+}
+
+.scoreboard {
+    background-color: #4c5688;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    padding: 1rem;
 }

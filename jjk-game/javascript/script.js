@@ -74,7 +74,7 @@ function endGame() {
 
     // Display the top scores
     const topScoresDiv = document.getElementById("topScores");
-    topScoresDiv.innerHTML = "<h2>Top Scores</h2>";
+    topScoresDiv.innerHTML = "";
     scores.forEach((score, index) => {
         topScoresDiv.innerHTML += `<p>${index + 1}. ${score}</p>`;
     });
