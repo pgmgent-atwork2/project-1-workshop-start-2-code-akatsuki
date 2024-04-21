@@ -29,7 +29,7 @@ setInterval(() => {
     }
 
     if (curseLeft < 50 && curseLeft > 0 && charTop > 150) {
-        alert("You got a score of: " + score.innerText + "\n\nPlay again?>");
+        alert("You got a score of: " + score.innerText + "\n\nPlay again?");
         location.reload();
     }
 });

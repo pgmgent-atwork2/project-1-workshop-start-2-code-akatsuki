@@ -7,7 +7,7 @@
     height: 350px;
     border: 2px solid black;
     margin: auto;
-    background-image: url("./background.gif");
+    background-image: url("../assets/background.gif");
     background-size: cover;
 }
 
@@ -16,7 +16,7 @@
     width: 75px;
     top: 255px;
     position: relative;
-    background-image: url("./itador.gif");
+    background-image: url("../assets/itador.gif");
     background-size: cover;
 }
 
@@ -26,7 +26,7 @@
     top: 210px;
     right: 500px;
     position: absolute;
-    background-image: url("./kenjaku.gif");
+    background-image: url("../assets/kenjaku.gif");
     background-size: cover;
 }
 
@@ -36,7 +36,7 @@
     position: relative;
     top: 180px;
     left: 550px;
-    background-image: url("./ezgif.com-effects.gif");
+    background-image: url("../assets/projectile.gif");
     background-position: center;
     background-size: cover;
     animation: curse 1.33s infinite;
