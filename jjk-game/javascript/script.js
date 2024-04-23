@@ -9,7 +9,7 @@ const scoreDisplay = document.getElementById("score");
 
 // Functie om het personage te laten springen
 function jump() {
-    char.classList.add("jump-animation"); // Voegt een klasse toe voor springanimatie
+    char.classList.add("jump-animation"); // Voegt een klasse toe aan jump-animation
     char.style.backgroundImage = "url('../assets/char-jump.gif')"; // Verandert de achtergrondafbeelding van het personage naar een springende versie
     setTimeout(() => {
         char.classList.remove("jump-animation"); // Verwijdert de klasse na een bepaalde tijd om de animatie te stoppen
