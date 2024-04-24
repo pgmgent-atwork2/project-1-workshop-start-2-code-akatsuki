@@ -1,11 +1,11 @@
 :root {
   --main-container-width: 90rem;
-  --background-color: #253361;
+  --primary-color: #253361;
   --light-color: #ffff;
   --secundary-color: #4c5688;
   --tirdairy-color: #747cb2;
   --no-list-style: none;
-  --normal-margin: 4rem;
+  --standard-margin: 1rem;
   --standard-padding: 1rem;
   --standard-border-radius: 1rem;
 }
@@ -47,7 +47,7 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
   color: var(--light-color);
   font-family: "PT Sans", sans-serif;
 }
@@ -146,7 +146,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 .tutorial-container {
-  margin: 1rem;
+  margin: var(--standard-margin);
   position: relative;
   overflow: hidden;
 }
@@ -256,5 +256,40 @@ header {
 
   & p {
     width: 28rem;
+  }
+
+  & .little__image {
+    width: 20rem;
+  }
+
+  & .download-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    & .download-link {
+      width: 10rem;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      padding: 0;
+      & img {
+        width: 2rem;
+      }
+      & a {
+        color: var(--light-color);
+        border-radius: var(--standard-border-radius);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: var(--standard-padding);
+      }
+
+      &:hover {
+        background-color: var(--primary-color);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+    }
   }
 }
