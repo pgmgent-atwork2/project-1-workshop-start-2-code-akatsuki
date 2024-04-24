@@ -14,3 +14,4 @@ Link naar de FIGjam file waar alle brainstorm ideeën werden gebeurd = [FIGJAM](
 - HTML
 - CSS
 - Javascript
+- Figma / Figjam
