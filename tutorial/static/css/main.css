@@ -106,7 +106,6 @@ header {
 }
 
 .description a:hover {
-  color: var(--tirdairy-color);
   transition: all 0.3s ease-in-out;
 }
 
@@ -251,8 +250,8 @@ header {
 
 .info-container {
   & img {
-    width: 100%;
-    max-width: 58rem;
+    width: 58rem;
+    object-fit: cover;
   }
 
   & p {
