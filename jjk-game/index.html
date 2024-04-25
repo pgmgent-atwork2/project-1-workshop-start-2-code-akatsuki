@@ -8,19 +8,21 @@
     </head>
     <body>
         <div id="game">
-            <h1 id="score">0</h1>
             <div id="character"></div>
             <div id="curse" class="curse"></div>
             <div id="curseTwo" class="curse second"></div>
             <div id="villain"></div>
             <div id="message" style="display: none">
-                <p id="messageText">
-                    You have achieved a score of: <span id="finalScore"></span>
-                </p>
-                <button id="playAgainButton">Play Again</button>
+                <div id="messageText">
+                    <h1>YOU DIED</h1>
+                    <p>GG = get good</p>
+                    <button class="btn" id="playAgainButton">Play Again</button>
+                    <button class="btn"><a href="../index.html">Home</a></button>
+                </div>
             </div>
         </div>
         <div class="scoreboard">
+            <h1 id="score">0</h1>
             <h2>Top score</h2>
             <div id="topScores"></div>
         </div>

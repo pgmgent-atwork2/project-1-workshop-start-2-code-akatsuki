@@ -1,105 +1,141 @@
 body {
-    font-family: sans-serif;
-    background-color: #253361;
-    color: white;
+  font-family: sans-serif;
+  background-color: #253361;
+  color: white;
 }
 
 #score {
-    text-align: center;
+  text-align: center;
 }
 
 #game {
-    width: 600px;
-    height: 350px;
-    border: 2px solid black;
-    margin: auto;
-    background-image: url("../assets/background.gif");
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
+  width: 600px;
+  height: 350px;
+  border: 2px solid black;
+  margin: auto;
+  background-image: url("../assets/background.gif");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 
 #character {
-    height: 100px;
-    width: 75px;
-    position: absolute; /* Position relative to the parent */
-    bottom: 0; /* Position at the bottom */
-    left: 0;
-    background-image: url("../assets/itador.gif");
-    background-size: cover;
+  height: 100px;
+  width: 75px;
+  position: absolute; /* Position relative to the parent */
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  background-image: url("../assets/itador.gif");
+  background-size: cover;
 }
 
 #villain {
-    height: 150px;
-    width: 100px;
-    position: absolute; /* Position relative to the parent */
-    bottom: 0; /* Position at the bottom */
-    right: 0;
-    position: absolute;
-    background-image: url("../assets/kenjaku.gif");
-    background-size: cover;
+  height: 150px;
+  width: 100px;
+  position: absolute; /* Position relative to the parent */
+  bottom: 0; /* Position at the bottom */
+  right: 0;
+  position: absolute;
+  background-image: url("../assets/kenjaku.gif");
+  background-size: cover;
 }
 
 .curse {
-    width: 50px;
-    height: 50px;
-    position: absolute; /* Position relative to the parent */
-    bottom: 0; /* Position at the bottom */
-    background-image: url("../assets/projectile.gif");
-    background-position: center;
-    background-size: cover;
-    animation: curse 1.75s infinite;
-    animation-timing-function: ease-in;
+  width: 50px;
+  height: 50px;
+  position: absolute; /* Position relative to the parent */
+  bottom: 0; /* Position at the bottom */
+  background-image: url("../assets/projectile.gif");
+  background-position: center;
+  background-size: cover;
+  animation: curse 1.75s infinite;
+  animation-timing-function: ease-in;
 }
 
 .second {
-    position: absolute; /* Position relative to the parent */
-    bottom: 100px; /* Position at the bottom */
-    animation: TopCurse 3s infinite;
-    animation-timing-function: ease-in;
+  position: absolute; /* Position relative to the parent */
+  bottom: 100px; /* Position at the bottom */
+  animation: TopCurse 3s infinite;
+  animation-timing-function: ease-in;
 }
 
 @keyframes curse {
-    0% {
-        left: 550px;
-    }
-    100% {
-        left: -20px;
-    }
+  0% {
+    left: 550px;
+  }
+  100% {
+    left: -20px;
+  }
 }
 
 @keyframes TopCurse {
-    0% {
-        left: 800px;
-    }
-    100% {
-        left: -20px;
-    }
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -20px;
+  }
 }
 
 .jump-animation {
-    animation: jump 0.5s;
+  animation: jump 0.5s;
 }
 
 @keyframes jump {
-    0% {
-        top: 225px;
-    }
-    50% {
-        top: 70px;
-    }
-    75% {
-        top: 70px;
-    }
-    100% {
-        top: 225px;
-    }
+  0% {
+    top: 225px;
+  }
+  50% {
+    top: 70px;
+  }
+  75% {
+    top: 70px;
+  }
+  100% {
+    top: 225px;
+  }
 }
 
 .scoreboard {
-    background-color: #4c5688;
-    text-align: center;
-    width: 600px;
-    margin: auto;
-    padding: 1rem;
+  background-color: #4c5688;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+#message {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: red;
+  position: relative;
+  margin: 0;
+}
+
+#messageText {
+  padding: 1rem;
+}
+
+.btn {
+  margin: auto;
+  border: none;
+  background-color: black;
+  color: red;
+  margin-top: 6rem;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+
+  & a {
+    color: red;
+  }
+}
+
+#playAgainButton:hover {
+  border-bottom: 1px solid red;
+  cursor: pointer;
+}
+
+#message p {
+  margin: 0;
 }

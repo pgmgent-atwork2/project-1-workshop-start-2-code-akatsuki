@@ -209,7 +209,7 @@
                                 <figure>
                                     <img
                                         class="little__image"
-                                        src="./static/assets/img/juji-charakter.jpg"
+                                        src="./static/assets/img/juji-charakter.png"
                                         alt="juji-charakter"
                                     />
                                 </figure>
@@ -226,9 +226,7 @@
                                     </p>
                                     <p class="download-link">
                                         <a
-                                            href="http://127.0.0.1:5501/tutorial/static/assets/charakters.zip"
-                                            download="charakters.zip"
-                                        >
+                                            href="https://www.mediafire.com/file/18fqofq5eed6u2o/charakters.zip/file" target="_blank">
                                             Download
                                             <img
                                                 src="./static/assets/img/file-arrow-down-solid.svg"
@@ -255,8 +253,100 @@
                             </article>
                         </li>
                         <li class="slide">
-                            <h2>7. Javascript coderen</h2>
-                            //TODO javascript fixen
+                            <h2>7. HTML Structuur</h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/15/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>
+                                    Kopieer de code van de HTML-structuur en plak deze in je index.html-bestand. Dit definieert de structuur en lay-out van waar de game zal plaatsvinden.</p>
+
+                            </article>
+                         
+                        </li>
+                        <li class="slide">
+                            <h2>8. Live extension</h2>
+                            <article class="info-container">
+                                <figure>
+                                    <img src="./static/assets/img/tutorial-live-sever.gif" alt="live-server-tutorial">
+                                </figure>
+                                <p>
+                                    In de extensie-tab van VS Code kun je diverse handige tools installeren. Voor deze taak maken we gebruik van de Live Server-extensie. Hiermee kun je je website bekijken terwijl je aan het ontwikkelen bent. Activeer dit door met de rechtermuisknop op <em>index.html</em> te klikken en te kiezen voor 'Openen met Live Server'.</p>
+                            </article>
+                        </li>
+                        <li class="slide">
+                            <h2>9. CSS Structuur</h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/17/embedded/css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>
+                                    Kopieer de code van de CSS-structuur en plak deze in je styles.css-bestand. Dit definieert de stijl en het uiterlijk van de game, evenals de positionering van de elementen die we hebben geschreven in <em>index.html</em>.</p>
+
+                            </article>
+                        </li>
+                        <li class="slide">
+                            <h2>10. JavaScript logica </h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/5/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>Kopieer de volgende JavaScript-code. Hiermee creëren we een array om onze scores op te slaan, zodat we de topscores kunnen bijhouden. <br> <br> We halen ook de vereiste elementen op, zodat we ze kunnen gebruiken in onze code. JavaScript stelt ons in staat om specifieke elementen te manipuleren en HTML dynamisch te genereren. In dit geval gebruiken we het om het spel te maken.</p>
+                            </article>
+
+                        </li>
+                        <li class="slide">
+                            <h2>11. JavaScript logica -Jump functie</h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/7/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>
+                                    Kopieer het volgende code onder de bestaande code . <br> <br> In JavaScript gebruiken we functies om specifieke taken uit te voeren, wat wordt aangeduid door de syntax function naamVanFunctie() { }. <br> <br> In de jump()-functie voegen we een klasse toe om het personage te laten springen en wordt tijdelijk de achtergrondafbeelding van het personage veranderd naar een springende versie.</p>
+                            </article>
+                        </li>
+                        <li class="slide">
+                            <h2>12. JavaScript logica - Handle Key press </h2>
+
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/8/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>Kopieer het volgende code onder de bestaande code. <br> <br>
+                                    handleKeyPress(event): Deze functie wordt aangeroepen wanneer er een toetsaanslag plaatsvindt. Als het personage niet al aan het springen is, wordt de jump()-functie uitgevoerd. <br> <br> In deze functie wordt er gebruik gemaakt van een andere functie maar de jump functie die we eerder gemaakt hebben wordt alleen maar opgeroepen indien de <strong>if()</strong> condition true is. </p>
+                            </article>
+                        </li>
+                        <li class="slide">
+                            <h2>13. JavaScript logica - Check collision</h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/9/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>
+                                    checkCollision(): Deze functie controleert of er een botsing plaatsvindt tussen het personage en de obstakels. Het verhoogt ook de score en be√´indigt het spel als er een botsing optreedt.
+                                    </p>
+                            </article>
+                        </li>
+                        <li class="slide"> 
+                            <h2>14. JavaScript logica - Endgame </h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/11/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>endGame(): Deze functie wordt aangeroepen als het spel eindigt door een botsing. Het registreert de huidige score, sorteert de scores, reset de obstakels en toont de top scores.</p>
+
+                            </article>
+                        </li>
+                        <li class="slide">
+                            <h2>15. JavaScript logica - Game over message</h2>
+                            <article class="info-container">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/11/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>In deze functie geeft gaat het html element veranderen die we hebben aangegeven. In dit geval zal de element "message" een block style krijgen. He was eerst onzichtbaar maar nu door het te veranderen naar block zal het zichtbaar worden.</p>
+                            </article> 
+                        </li>
+                        <li class="slide">
+                            <h2>16. JavaScript logica - Reset van de game</h2>
+                            <article class="info-container"> 
+                                <iframe width="100%" height="300" src="//jsfiddle.net/amintest101/ec4stnbg/13/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                                <p>Door gebruik te maken van deze functie wordt alles gereset, inclusief de highscore. Er is een knop in de HTML die ervoor zorgt dat wanneer het game-over scherm verschijnt, je de game opnieuw kunt spelen.</p>
+                            </article>
+                        </li>
+                       
+                        <li class="slide">
+                            <h2>17. Speel de game</h2>
+                            <article class="info-container">
+                                <figure>
+                                    <img class="end-slide__item" src="./static/assets/img/juji-pose.png" alt="Juji">
+                                </figure>
+                                <p>Als je alle stappen hebt gevolgd, zou je nu je eigen versie van het Dino-spel moeten hebben. Probeer het uit en kijk of je de hoogste score kunt behalen!</p>
+
+                            </article>
                         </li>
                     </ul>
                 </div>

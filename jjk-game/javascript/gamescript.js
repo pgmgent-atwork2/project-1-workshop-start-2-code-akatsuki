@@ -1,5 +1,5 @@
 // Array om scores op te slaan
-let scores = [];
+let scores = JSON.parse(localStorage.getItem('scores')) || [];
 
 // Variabele om de interval ID op te slaan
 let gameInterval;
@@ -28,7 +28,10 @@ function handleKeyPress(event) {
         jump(); // Roep de jump-functie aan als het personage niet al aan het springen is
     }
 }
-
+topScoresDiv.innerHTML = "";
+scores.forEach((score, index) => {
+    topScoresDiv.innerHTML += `<p>${index + 1}. ${score}</p>`;
+});
 // Functie om botsingen te controleren
 function checkCollision() {
     const charTop = parseInt(
@@ -67,6 +70,7 @@ function checkCollision() {
 
 // Functie om het spel te beëindigen
 function endGame() {
+    localStorage.setItem('scores', JSON.stringify(scores));
     const currentScore = parseInt(scoreDisplay.innerText); // Haal de huidige score op
     scores.push(currentScore); // Voeg de huidige score toe aan de scores-array
     scores.sort((a, b) => b - a); // Sorteer de scores in dalende volgorde
@@ -97,10 +101,8 @@ function endGame() {
 }
 
 // Functie om het bericht weer te geven wanneer het spel eindigt
-function showEndMessage(score) {
+function showEndMessage() {
     const messageDiv = document.getElementById("message");
-    const finalScoreSpan = document.getElementById("finalScore");
-    finalScoreSpan.innerText = score;
     messageDiv.style.display = "block";
 }
 

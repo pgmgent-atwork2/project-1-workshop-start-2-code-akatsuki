@@ -98,6 +98,7 @@ header {
 .description__text {
   width: 40rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .description a {
@@ -107,6 +108,7 @@ header {
 
 .description a:hover {
   transition: all 0.3s ease-in-out;
+  background-color: var(--tirdairy-color);
 }
 
 .top-content .description__img img {
@@ -250,10 +252,15 @@ header {
 
 .info-container {
   & img {
-    width: 58rem;
+    width: 50rem;
     object-fit: cover;
   }
-
+  & .end-slide__item {
+    width: 25rem;
+  }
+  & iframe {
+    width: 50rem;
+  }
   & p {
     width: 28rem;
   }
