@@ -9,12 +9,12 @@ const scoreDisplay = document.getElementById("score");
 
 // Functie om het personage te laten springen
 function jump() {
-    char.classList.add("jump-animation"); // Voegt een klasse toe aan jump-animation
-    char.style.backgroundImage = "url('../assets/char-jump.gif')"; // Verandert de achtergrondafbeelding van het personage naar een springende versie
+    char.classList.add("jump-animation");
+    char.style.backgroundImage = "url('./assets/char-jump.gif')";
     setTimeout(() => {
-        char.classList.remove("jump-animation"); // Verwijdert de klasse na een bepaalde tijd om de animatie te stoppen
-        char.style.backgroundImage = "url('../assets/itador.gif')"; // Keert terug naar de standaard achtergrondafbeelding van het personage
-    }, 500); // Wacht 0.5 seconden voordat de animatie stopt
+        char.classList.remove("jump-animation");
+        char.style.backgroundImage = "url('./assets/itador.gif')";
+    }, 500);
 }
 
 // Functie om te reageren op toetsaanslagen
@@ -92,8 +92,6 @@ function endGame() {
     );
     // Reset de scoreweergave naar nul
     scoreDisplay.innerText = "0";
-    // Voorkom het standaardgedrag van het gebeurtenis dat de pagina opnieuw laadt
-    event.preventDefault();
 }
 
 // Luister naar toetsaanslagen om het personage te laten springen
