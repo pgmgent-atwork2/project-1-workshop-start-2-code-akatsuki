@@ -1,11 +1,15 @@
 // Array om scores op te slaan
 let scores = [];
 
+// Variabele om de interval ID op te slaan
+let gameInterval;
+
 // Haal de DOM-elementen op
 const char = document.getElementById("character");
 const curse = document.getElementById("curse");
 const curseTwo = document.getElementById("curseTwo");
 const scoreDisplay = document.getElementById("score");
+const topScoresDiv = document.getElementById("topScores");
 
 // Functie om het personage te laten springen
 function jump() {
@@ -80,24 +84,52 @@ function endGame() {
     curseTwo.classList.add("second"); // Voeg de animatieklasse opnieuw toe
 
     // Toon de top scores
-    const topScoresDiv = document.getElementById("topScores");
     topScoresDiv.innerHTML = "";
     scores.forEach((score, index) => {
         topScoresDiv.innerHTML += `<p>${index + 1}. ${score}</p>`;
     });
 
     // Toon een bericht met de behaalde score en vraag om opnieuw te spelen
-    alert(
-        "Je hebt een score behaald van: " + currentScore + "\n\nSpeel opnieuw?"
-    );
-    // Reset de scoreweergave naar nul
-    scoreDisplay.innerText = "0";
+    showEndMessage(currentScore);
+
+    // Stop het spel
+    clearInterval(gameInterval);
 }
 
-// Luister naar toetsaanslagen om het personage te laten springen
+// Functie om het bericht weer te geven wanneer het spel eindigt
+function showEndMessage(score) {
+    const messageDiv = document.getElementById("message");
+    const finalScoreSpan = document.getElementById("finalScore");
+    finalScoreSpan.innerText = score;
+    messageDiv.style.display = "block";
+}
+
+// Functie om het spel te resetten
+function resetGame() {
+    // Verberg het bericht
+    const messageDiv = document.getElementById("message");
+    messageDiv.style.display = "none";
+
+    // Reset de score
+    scoreDisplay.innerText = "0";
+
+    // Start het spel opnieuw
+    gameInterval = setInterval(checkCollision, 100); // 100 milliseconds interval
+}
+
+// Functie om opnieuw te starten
+function handleRestart() {
+    resetGame();
+}
+
+// Voeg event listener toe voor de "Play Again" knop
+const playAgainButton = document.getElementById("playAgainButton");
+playAgainButton.addEventListener("click", handleRestart);
+
+// Voeg event listener toe voor toetsaanslagen om het personage te laten springen
 document.addEventListener("keypress", function (event) {
     handleKeyPress(event);
 });
 
-// Controleer periodiek op botsingen
-setInterval(checkCollision);
+// Start het spel
+resetGame();
